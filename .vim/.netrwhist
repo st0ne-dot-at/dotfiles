@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/steininr/Downloads'
+let g:netrw_dirhist_2='/home/steininr/test'
+let g:netrw_dirhist_3='/home/steininr/android/android-sdk-linux/samples/android-8/SkeletonApp/res/layout'
+let g:netrw_dirhist_4='/home/steininr/repo/tickethub/trunk/src/main/resources'
+let g:netrw_dirhist_5='/home/steininr/repo/.svn'
+let g:netrw_dirhist_6='/home/steininr/repo/TicketHub/trunk/src/main/resources'
+let g:netrw_dirhist_7='/home/steininr/git/spring-integration-samples/applications/cafe-scripted/scripts/python'
+let g:netrw_dirhist_8='/home/steininr/git/spring-integration-samples/applications/cafe-scripted/scripts/javascript'
+let g:netrw_dirhist_9='/home/steininr/git/spring-integration-samples/applications/cafe-scripted/scripts/groovy'
