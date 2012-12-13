@@ -1,0 +1,3 @@
+set editor="gnome-terminal -x vim"
+map J <C-p>
+map K <C-n>
