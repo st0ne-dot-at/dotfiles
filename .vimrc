@@ -29,10 +29,19 @@ set ignorecase
 set smartcase
 set wildignore+=*.pyc,*.o,*.class
 
+" 256 color support for gnome-terminal
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+
+set number
+highlight LineNr ctermfg=243 ctermbg=235 guibg=grey
+
 
 " Status
 set laststatus=2
