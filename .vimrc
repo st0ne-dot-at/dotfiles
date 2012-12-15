@@ -34,7 +34,6 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
-
 " Status
 set laststatus=2
 set statusline=
