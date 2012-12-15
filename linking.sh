@@ -19,6 +19,7 @@ for file in $(ls -1d \.??* | grep -ve '^.git$'); do
    fi
 done
 
+mkdir ~/.vim_undo 2>/dev/null
 
 
 
