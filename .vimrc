@@ -27,10 +27,13 @@ set wrap
 set scrolloff=5
 set ignorecase
 set smartcase
-set wildignore+=*.pyc,*.o,*.class
+set wildignore+=*.pyc,*.o,*.class,.git,.svn
 
 " 256 color support for gnome-terminal
 if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+if $TERM == 'xterm'
   set t_Co=256
 endif
 
@@ -56,7 +59,7 @@ set statusline+=%2(C(%v/125)%)\ " column
 set statusline+=%P " percentage of file
 
 " mapleader
-let mapleader="."
+let mapleader=","
 
 " NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
@@ -81,7 +84,10 @@ map <silent> <Leader>vx :wa<CR> :VimuxClosePanes<CR>
 map <silent> <leader>ff :CommandT<CR>
 map <silent> <leader>fb :CommandTBuffer<CR>
 map <silent> <leader>fr :CommandTFlush<CR>
-
+let g:CommandTMaxFiles = 50000
+let g:CommandTMaxDepth = 25
+let g:CommandTAlwaysShowDotFiles = 1
+let g:CommandTScanDotDirectories = 1
 
 " restor cursor position
 set viminfo='10,\"100,:20,%,n~/.viminfo

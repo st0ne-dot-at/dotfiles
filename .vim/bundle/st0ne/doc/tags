@@ -1,4 +1,8 @@
 BUFFEREXPLORER	st0ne.txt	/*BUFFEREXPLORER*
+COMMAND-T	st0ne.txt	/*COMMAND-T*
 MARKS	st0ne.txt	/*MARKS*
 TABS	st0ne.txt	/*TABS*
+TMUX	st0ne.txt	/*TMUX*
+save_session	st0ne.txt	/*save_session*
 st0ne	st0ne.txt	/*st0ne*
+st0ne.txt	st0ne.txt	/*st0ne.txt*

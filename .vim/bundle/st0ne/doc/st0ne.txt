@@ -1,22 +1,53 @@
-*st0ne* <<<
+*st0ne.txt* my stuff
 
-*TABS* <<<
+CONTENTS                                            *st0ne*
+===========================================================
+
+* VIM            |TABS|
+* VIM            |save_session|
+* VIM            |MARKS|
+* BUFFEREXPLORER |BUFFEREXPLORER|
+* tmux           |TMUX|
+* command-t      |COMMAND-T|
+
+VIM *TABS*
+------
 vim -p nix1 nix2
 
 gt[N] ... move to Nth tab
 
-save session
+
+VIM *save_session*
+--------------
 :mksession your_session.vim
 
 open session
 vim -S your_session.vim
 
+VIM *MARKS*
+-------
+ma  ... mark line as a
+'a  ... jump to a
 
-*BUFFEREXPLORER* <<<
+*BUFFEREXPLORER*
+----------------
 .be open bufferexplorer
 
-*MARKS* <<<
-ma  ... mark line as a
+tmux *TMUX*
+-----------
+( st0nes key binding according ~/.tmux.conf )
+M-m               ... prefix
+M-n               ... next window
+prefix [j\|k\|l\|h]  ... move to pane
+prefix x          ... kill pane
+prefix %          ... split vertical
+prefix "          ... split horizontal
+prefix !          ... make pane to window
+prefix c          ... create new window
 
-'a  ... jump to a
+COMMAND-T *COMMAND-T*
+-----------
+,ff ... find mode
+,fb ... search in recent files
+,fr ... fush
 
