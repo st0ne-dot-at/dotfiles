@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/home/st0ne/repo/TicketHub/trunk/python'
 let g:netrw_dirhist_2='/home/st0ne/repo'
+let g:netrw_dirhist_3='/home/st0ne/dotfiles/.vim/bundle/st0ne/doc'

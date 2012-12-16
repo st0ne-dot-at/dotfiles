@@ -1,14 +1,22 @@
-*st0ne.txt*   st0ne *st0ne*
+*st0ne* <<<
+
+*TABS* <<<
+vim -p nix1 nix2
+
+gt[N] ... move to Nth tab
+
+save session
+:mksession your_session.vim
+
+open session
+vim -S your_session.vim
 
 
-1. my shortcuts |shortcuts|
+*BUFFEREXPLORER* <<<
+.be open bufferexplorer
 
+*MARKS* <<<
+ma  ... mark line as a
 
-
-
-*shortcuts* shortcuts
-
-
-
-
+'a  ... jump to a
 
