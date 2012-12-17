@@ -2,7 +2,7 @@
 
 cd $(dirname $0)
 
-for file in $(ls -1d \.??* | grep -ve '^.git$'); do
+for file in $(ls -1d \.??* | grep -ve '^.git.*'); do
 
    if [ -L ~/$file ]; then
       echo $file is a link ... nothing to do
