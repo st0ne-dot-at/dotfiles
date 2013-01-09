@@ -10,3 +10,4 @@ fi
 
 alias tmux='tmux -2 -f ~/.tmux.conf '
 alias vi='vim'
+setxkbmap -option "ctrl:nocaps"

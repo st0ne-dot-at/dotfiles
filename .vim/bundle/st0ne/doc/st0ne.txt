@@ -6,6 +6,7 @@ CONTENTS                                            *st0ne*
 * VIM            |TABS|
 * VIM            |save_session|
 * VIM            |MARKS|
+* VIM            |MARKS|
 * BUFFEREXPLORER |BUFFEREXPLORER|
 * tmux           |TMUX|
 * command-t      |COMMAND-T|
@@ -15,6 +16,7 @@ VIM *TABS*
 vim -p nix1 nix2
 
 gt[N] ... move to Nth tab
+:tabnew ... create new tab
 
 
 VIM *save_session*
