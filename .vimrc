@@ -62,7 +62,7 @@ set statusline+=%P " percentage of file
 let mapleader=","
 
 " NERDTree
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
 map <silent> <Leader>nt :NERDTreeToggle<CR>
 map <silent> <Leader>nr :NERDTree<CR>
 map <silent> <Leader>nf :NERDTreeFind<CR>
