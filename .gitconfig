@@ -1,3 +1,10 @@
+[user]
+	name = st0ne
+	email = rob@st0ne.at
+[core]
+	autocrlf = input
+	safecrlf = true
+
 [alias]
   co = checkout
   ci = commit
