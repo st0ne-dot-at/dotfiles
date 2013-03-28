@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/st0ne/repo/TicketHub/trunk/python'
-let g:netrw_dirhist_2='/home/st0ne/repo'
-let g:netrw_dirhist_3='/home/st0ne/dotfiles/.vim/bundle/st0ne/doc'
-let g:netrw_dirhist_4='/home/steininr/puppet/templates'
-let g:netrw_dirhist_5='/home/steininr/repo/jmxmon_agent_test/trunk/src/main/resources/META-INF'
-let g:netrw_dirhist_6='/home/steininr/workspace/jmxmon_agent_test'
