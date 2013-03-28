@@ -1,0 +1,15 @@
+[user]
+	name = dummy
+	email = dummy@dummy.com
+[core]
+	autocrlf = input
+	safecrlf = true
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph
+  type = cat-file -t
+  dump = cat-file -p

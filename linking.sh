@@ -2,7 +2,7 @@
 
 cd $(dirname $0)
 
-for file in $(ls -1d \.??* | grep -ve '^.git.*') .gitconfig; do
+for file in $(ls -1d \.??* | grep -ve '^.git.*'); do
 
    if [ -L ~/$file ]; then
       echo $file is a link ... nothing to do
@@ -16,6 +16,14 @@ for file in $(ls -1d \.??* | grep -ve '^.git.*') .gitconfig; do
       ln -s $PWD/$file ~/$file
    else
       echo nothing to do for $file
+   fi
+done
+
+for file in $(ls -1d \.?*.template); do
+   target=$(echo $file | sed -e 's/\.template//')
+   if [ ! -e ~/$target ]; then
+       echo ~/target does not exist ... copying
+       cp $file ~/$target
    fi
 done
 
