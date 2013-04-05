@@ -104,3 +104,5 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
+inoremap <c-k> <Up>
+inoremap <c-j> <Down>
