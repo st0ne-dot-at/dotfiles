@@ -29,5 +29,7 @@ done
 
 mkdir ~/.vim_undo 2>/dev/null
 
+git submodule update --init
+
 
 
