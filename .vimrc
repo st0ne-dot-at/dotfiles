@@ -37,6 +37,11 @@ if $TERM == 'xterm'
   set t_Co=256
 endif
 
+autocmd InsertEnter * match ExtraTab /\t/
+autocmd BufRead,InsertLeave * match ExtraTab /\t/
+highlight ExtraTab ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraTab ctermbg=red guibg=red
+
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -106,3 +111,10 @@ augroup END
 
 inoremap <c-k> <Up>
 inoremap <c-j> <Down>
+" vom koarl
+set list " show invisible characters
+set listchars="" " reset the listchars
+set listchars+=tab:▸\ " show tabs as ▸
+set listchars+=eol:¬ " show end of line as ¬
+set listchars+=trail:. " show trailing spaces as dots
+set listchars+=extends:> " show > if the text continues beyond the vim window
