@@ -23,8 +23,8 @@ export M2_HOME=~/env/apps/maven/maven/
 export PATH=~/env/apps/maven/maven/bin:${PATH}
 
 # java
-export PATH=~/env/java/java6/bin/:${PATH}
-export JAVA_HOME=~/env/java/java6/
+export PATH=~/env/java/java8/bin/:${PATH}
+export JAVA_HOME=~/env/java/java8/
 
 # bin
 export PATH=~/env/bin/:${PATH}
