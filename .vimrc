@@ -64,7 +64,7 @@ set statusline+=%2(C(%v/125)%)\ " column
 set statusline+=%P " percentage of file
 
 " mapleader
-let mapleader=","
+"let mapleader=","
 
 " NERDTree
 "autocmd vimenter * if !argc() | NERDTree | endif
