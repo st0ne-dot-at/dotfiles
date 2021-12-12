@@ -1,4 +1,7 @@
-call pathogen#runtime_append_all_bundles()
+call plug#begin('~/.vim/plugged')
+Plug 'SirVer/ultisnips'
+" Initialize plugin system
+call plug#end()
 
 set nocompatible
 
@@ -66,34 +69,6 @@ set statusline+=%P " percentage of file
 " mapleader
 "let mapleader=","
 
-" NERDTree
-"autocmd vimenter * if !argc() | NERDTree | endif
-map <silent> <Leader>nt :NERDTreeToggle<CR>
-map <silent> <Leader>nr :NERDTree<CR>
-map <silent> <Leader>nf :NERDTreeFind<CR>
-
-
-map <silent> <Leader>ww :wincmd w<CR>
-
-"vimux
-let g:VimuxUseNearestPane = 1
-map <silent> <Leader>vp :VimuxPromptCommand<CR>
-map <silent> <Leader>rl :wa<CR> :VimuxRunLastCommand<CR>
-map <silent> <Leader>vi :wa<CR> :VimuxInspectRunner<CR>
-map <silent> <Leader>vk :wa<CR> :VimuxInterruptRunner<CR>
-map <silent> <Leader>vx :wa<CR> :VimuxClosePanes<CR>
-
-
-"CommandT
-" CommandT
-map <silent> <leader>ff :CommandT<CR>
-map <silent> <leader>fb :CommandTBuffer<CR>
-map <silent> <leader>fr :CommandTFlush<CR>
-let g:CommandTMaxFiles = 50000
-let g:CommandTMaxDepth = 25
-let g:CommandTAlwaysShowDotFiles = 1
-let g:CommandTScanDotDirectories = 1
-
 " restor cursor position
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
@@ -118,3 +93,77 @@ set listchars+=tab:▸\ " show tabs as ▸
 set listchars+=eol:¬ " show end of line as ¬
 set listchars+=trail:. " show trailing spaces as dots
 set listchars+=extends:> " show > if the text continues beyond the vim window
+
+" NERDTree plugin specific commands
+filetype plugin indent on
+
+" Allow backspace to delete indentation and inserted text
+" i.e. how it works in most programs
+set backspace=indent,eol,start
+" indent  allow backspacing over autoindent
+" eol     allow backspacing over line breaks (join lines)
+" start   allow backspacing over the start of insert; CTRL-W and CTRL-U
+"        stop once at the start of insert.
+
+
+" go-vim plugin specific commands
+" Also run `goimports` on your current file on every save
+" Might be be slow on large codebases, if so, just comment it out
+let g:go_fmt_command = "goimports"
+
+" Status line types/signatures.
+let g:go_auto_type_info = 1
+
+"au filetype go inoremap <buffer> . .<C-x><C-o>
+
+" If you want to disable gofmt on save
+" let g:go_fmt_autosave = 0
+
+
+" NERDTree plugin specific commands
+:nnoremap <C-g> :NERDTreeToggle<CR>
+"autocmd vimenter * NERDTree
+
+
+" air-line plugin specific commands
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+set autowrite
+
+colo pablo
+
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
+let g:go_auto_type_info = 1
+let g:go_auto_sameids = 1
