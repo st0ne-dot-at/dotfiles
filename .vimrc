@@ -4,6 +4,7 @@ Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
+Plug 'tarmack/vim-python-ftplugin'
 " Initialize plugin system
 call plug#end()
 
@@ -29,7 +30,7 @@ set undolevels=1000
 set noautoindent
 set nosmartindent
 set ruler
-set wrap
+"set wrap
 
 set scrolloff=5
 set ignorecase
@@ -44,15 +45,15 @@ if $TERM == 'xterm'
   set t_Co=256
 endif
 
-autocmd InsertEnter * match ExtraTab /\t/
-autocmd BufRead,InsertLeave * match ExtraTab /\t/
-highlight ExtraTab ctermbg=red guibg=red
-autocmd ColorScheme * highlight ExtraTab ctermbg=red guibg=red
+"autocmd InsertEnter * match ExtraTab /\t/
+"autocmd BufRead,InsertLeave * match ExtraTab /\t/
+"highlight ExtraTab ctermbg=red guibg=red
+"autocmd ColorScheme * highlight ExtraTab ctermbg=red guibg=red
 
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
-highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+"autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+"autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
+"highlight ExtraWhitespace ctermbg=red guibg=red
+"autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 set number
 highlight LineNr ctermfg=243 ctermbg=235 guibg=grey
